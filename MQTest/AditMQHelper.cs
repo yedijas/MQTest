@@ -22,6 +22,9 @@ namespace MQTest
         private MQQueue MyQueue;
         private MQMessage MyQueueMessage;
 
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
         public AditMQHelper()
         {
             Host = "";
