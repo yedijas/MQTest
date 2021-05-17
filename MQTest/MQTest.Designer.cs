@@ -43,6 +43,8 @@ namespace MQTest
             this.label5 = new System.Windows.Forms.Label();
             this.tbQName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cbTransportType = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -56,16 +58,16 @@ namespace MQTest
             // 
             // tbServer
             // 
-            this.tbServer.Location = new System.Drawing.Point(80, 13);
+            this.tbServer.Location = new System.Drawing.Point(99, 13);
             this.tbServer.Name = "tbServer";
-            this.tbServer.Size = new System.Drawing.Size(420, 20);
+            this.tbServer.Size = new System.Drawing.Size(401, 20);
             this.tbServer.TabIndex = 1;
             // 
             // tbPort
             // 
-            this.tbPort.Location = new System.Drawing.Point(80, 39);
+            this.tbPort.Location = new System.Drawing.Point(99, 39);
             this.tbPort.Name = "tbPort";
-            this.tbPort.Size = new System.Drawing.Size(420, 20);
+            this.tbPort.Size = new System.Drawing.Size(401, 20);
             this.tbPort.TabIndex = 3;
             // 
             // label2
@@ -79,9 +81,9 @@ namespace MQTest
             // 
             // tbQManager
             // 
-            this.tbQManager.Location = new System.Drawing.Point(80, 65);
+            this.tbQManager.Location = new System.Drawing.Point(99, 65);
             this.tbQManager.Name = "tbQManager";
-            this.tbQManager.Size = new System.Drawing.Size(420, 20);
+            this.tbQManager.Size = new System.Drawing.Size(401, 20);
             this.tbQManager.TabIndex = 5;
             // 
             // label3
@@ -95,9 +97,9 @@ namespace MQTest
             // 
             // tbChannel
             // 
-            this.tbChannel.Location = new System.Drawing.Point(80, 91);
+            this.tbChannel.Location = new System.Drawing.Point(99, 91);
             this.tbChannel.Name = "tbChannel";
-            this.tbChannel.Size = new System.Drawing.Size(420, 20);
+            this.tbChannel.Size = new System.Drawing.Size(401, 20);
             this.tbChannel.TabIndex = 7;
             // 
             // label4
@@ -131,7 +133,7 @@ namespace MQTest
             // 
             // tbMessage
             // 
-            this.tbMessage.Location = new System.Drawing.Point(12, 161);
+            this.tbMessage.Location = new System.Drawing.Point(12, 198);
             this.tbMessage.Name = "tbMessage";
             this.tbMessage.Size = new System.Drawing.Size(653, 264);
             this.tbMessage.TabIndex = 10;
@@ -140,7 +142,7 @@ namespace MQTest
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 145);
+            this.label5.Location = new System.Drawing.Point(14, 182);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 11;
@@ -148,9 +150,9 @@ namespace MQTest
             // 
             // tbQName
             // 
-            this.tbQName.Location = new System.Drawing.Point(80, 117);
+            this.tbQName.Location = new System.Drawing.Point(99, 117);
             this.tbQName.Name = "tbQName";
-            this.tbQName.Size = new System.Drawing.Size(420, 20);
+            this.tbQName.Size = new System.Drawing.Size(401, 20);
             this.tbQName.TabIndex = 13;
             // 
             // label6
@@ -162,11 +164,35 @@ namespace MQTest
             this.label6.TabIndex = 12;
             this.label6.Text = "Q Name";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(14, 146);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(79, 13);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Transport Type";
+            // 
+            // cbTransportType
+            // 
+            this.cbTransportType.FormattingEnabled = true;
+            this.cbTransportType.Items.AddRange(new object[] {
+            "connect as Server",
+            "connect as non-XA client",
+            "connect as XA client",
+            "connect as non-XA managed client"});
+            this.cbTransportType.Location = new System.Drawing.Point(99, 143);
+            this.cbTransportType.Name = "cbTransportType";
+            this.cbTransportType.Size = new System.Drawing.Size(401, 21);
+            this.cbTransportType.TabIndex = 15;
+            // 
             // MQTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 437);
+            this.ClientSize = new System.Drawing.Size(682, 505);
+            this.Controls.Add(this.cbTransportType);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.tbQName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -204,6 +230,8 @@ namespace MQTest
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbQName;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cbTransportType;
     }
 }
 

@@ -72,6 +72,22 @@ namespace MQTest
             MyMQHelper.QM = tbQManager.Text;
             MyMQHelper.Channel = tbChannel.Text;
             MyMQHelper.QueueName = tbQName.Text;
+            MyMQHelper.TransportType = CheckTransportType();
+        }
+
+        private ConnectType CheckTransportType()
+        {
+            switch (cbTransportType.SelectedIndex)
+            {
+                case 0:
+                    return ConnectType.SERVER;
+                case 1:
+                    return ConnectType.NONXA;
+                case 2:
+                    return ConnectType.XACLIENT;
+                default:
+                    return ConnectType.NONXAMANAGED;
+            }
         }
     }
 }
